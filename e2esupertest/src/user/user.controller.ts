@@ -17,7 +17,12 @@ export class UserController {
 
   @Post()
   create(@Body() createUserDto: CreateUserDto) {
-    return this.userService.create(createUserDto);
+    console.log(
+      '🚀 ~ file: user.controller.ts:20 ~ UserController ~ create ~ createUserDto:',
+      createUserDto,
+    );
+    return createUserDto;
+    // return this.userService.create(createUserDto);
   }
 
   @Get()
